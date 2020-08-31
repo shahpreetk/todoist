@@ -5,7 +5,7 @@ const firebaseConfig = firebase.initializeApp({
     projectId: '',
     storageBucket: '',
     messageSenderId: '',
-    apiId: ''
+    apiId: 'plokijuhygf'
 });
 
 export {firebaseConfig as firebase};
