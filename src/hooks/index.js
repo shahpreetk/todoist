@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import moment from 'moment'
-import {firebase} from 'firebase'
+import {firebase} from '../firebase'
 import {collatedTasksExist} from '../helpers'
 
 export const useTasks = selectedProject => {
@@ -11,7 +11,7 @@ export const useTasks = selectedProject => {
         let unsubscribe = firebase
             .firestore()
             .collection('tasks')
-            .wehre('userId', '==', 'c422780d6077477594639749729eef36');
+            .where('userId', '==', 'c422780d6077477594639749729eef36');
 
             unsubscribe = selectedProject && !collatedTasksExist(selectedProject)?
             (unsubscribe = unsubscribe.where('projectId', '==', selectedProject))
