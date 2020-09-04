@@ -5,8 +5,8 @@ import Projects from '../Projects';
 import AddProject from '../AddProjects';
 
 const Sidebar = () => {
-    const {setSelectedProject} = useSelectedProjectValue;
-    const [active, setActive] = useState('inbox')
+    // const {setSelectedProject} = useSelectedProjectValue;
+    // const [active, setActive] = useState('inbox')
     const [showProjects, setShowProjects] = useState(true)
     return(
             <div className="sidebar" data-testid='sidebar'>
