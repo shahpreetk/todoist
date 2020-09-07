@@ -272,14 +272,18 @@ header {
   }
 
   li {
+    padding-left: 10px;
+    padding-right: 15px;
+
     &:hover .sidebar__project-delete {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      // display: -webkit-box;
+      // display: -ms-flexbox;
+      display: block;
     }
   }
 
   &__project {
+    padding: 5px 0;
     cursor: pointer;
 
     div:nth-child(1) {
@@ -385,6 +389,7 @@ header {
 
   &__generic {
     li {
+      padding: 10px 0 10px 10px;
       list-style-type: none;
       color: #333;
       display: -webkit-box;
@@ -393,23 +398,22 @@ header {
       cursor: pointer;
       line-height: 1.50;
       font-size: 15px;
-      padding: 10px 0 10px 10px;
 
-      div:nth-child(1) {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        padding: 10px 0 10px 10px;
-        width: 100%;
+      // div:nth-child(1) {
+      //   display: -webkit-box;
+      //   display: -ms-flexbox;
+      //   display: flex;
+      //   padding: 10px 0 10px 10px;
+      //   width: 100%;
 
         span:first-of-type {
           margin-right: 10px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
+          // display: -webkit-box;
+          // display: -ms-flexbox;
+          // display: flex;
+          // -webkit-box-align: center;
+          // -ms-flex-align: center;
+          // align-items: center;
 
           svg {
             width: 18px;
@@ -417,7 +421,7 @@ header {
             color: #555;
           }
         }
-      }
+      // }
 
       &.active,
       &:hover {
