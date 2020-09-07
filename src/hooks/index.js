@@ -3,7 +3,7 @@ import moment from 'moment'
 import {firebase} from '../firebase'
 import {collatedTasksExist} from '../helpers'
 
-export const useTasks = selectedProject => {
+export  const useTasks = selectedProject => {
     const [tasks, setTasks] = useState([])
     const [archivedTasks, setArchivedTasks] = useState([])
 
@@ -13,13 +13,14 @@ export const useTasks = selectedProject => {
             .collection('tasks')
             .where('userId', '==', 'c422780d6077477594639749729eef36');
 
-            unsubscribe = selectedProject && !collatedTasksExist(selectedProject)?
-            (unsubscribe = unsubscribe.where('projectId', '==', selectedProject))
-            : selectedProject === 'TODAY'
-            ? (unsubscribe = unsubscribe.where('date', '==', moment.format('DD/MM/YYYY')))
-            : selectedProject === 'INBOX' || selectedProject === 0
-            ? (unsubscribe = unsubscribe.where('date', '==', ''))
-            : unsubscribe;
+            unsubscribe =
+                selectedProject && !collatedTasksExist(selectedProject)
+                    ? (unsubscribe = unsubscribe.where('projectId', '==', selectedProject))
+                    : selectedProject === 'TODAY'
+                    ? (unsubscribe = unsubscribe.where('date', '==', moment().format('DD/MM/YYYY')))
+                    : selectedProject === 'INBOX' || selectedProject === 0
+                    ? (unsubscribe = unsubscribe.where('date', '==', ''))
+                    : unsubscribe;
 
         unsubscribe = unsubscribe.onSnapshot(snapshot => {
             const newTasks = snapshot.docs.map(task=>({
