@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {firebase} from '../firebase';
 import {generatePushId} from '../helpers';
 import {useProjectsValue} from '../context';
-import { FaDivide } from 'react-icons/fa'
 
 const AddProject = ({shouldShow = false}) => {
     const [show, setShow] = useState(shouldShow)
