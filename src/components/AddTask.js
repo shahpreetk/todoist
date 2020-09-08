@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FaRegListAlt, FaRegCalendarAlt } from 'react-icons/fa';
 import moment from 'moment';
 import { firebase } from '../firebase'
 import { useSelectedProjectValue } from '../context';
 
-const AddTask = ({ showAddTaskMain = true, showShouldMain = false, showQuickAddTask, setShowQuickAddTask }) => {
+const AddTask = ({ showAddTaskMain = true, shouldShowMain = false, showQuickAddTask, setShowQuickAddTask }) => {
     const [task, setTask] = useState('')
     const [taskDate, setTaskDate] = useState('')
     const [project, setProject] = useState('')
@@ -39,14 +39,24 @@ const AddTask = ({ showAddTaskMain = true, showShouldMain = false, showQuickAddT
                 .then(() => {
                     setTask('')
                     setProject('')
-                    setShowMaink('')
+                    setShowMain('')
                     setShowProjectOverlay(false)
                 })
         )
     }
 
     return (
-        <p>stop</p>
+        <div
+            className={showQuickAddTask ? 'add-task add-task__overlay' : 'add-task'} data-testid='add-task-comp'>
+            {
+                showAddTaskMain && (
+                    <div className='add-task__shallow' data-testid='show-main-action' onClick={() => setShowMain(!showMain)}>
+                        <span className='add-task__plus'>+</span>
+                        <span className='add-task__text'>Add Task</span>
+                    </div>
+                )
+            }
+        </div>
     )
 }
 

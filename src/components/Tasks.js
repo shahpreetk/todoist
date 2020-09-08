@@ -4,6 +4,7 @@ import {useTasks} from '../hooks'
 import {collatedTasks} from '../constants'
 import {getTitle, getCollatedTitle, collatedTasksExist} from '../helpers'
 import {useSelectedProjectValue, useProjectsValue} from '../context'
+import AddTask from './AddTask'
 
 const Tasks = () => {
     const {selectedProject} = useSelectedProjectValue()
@@ -27,7 +28,7 @@ const Tasks = () => {
     })
 
     console.log('tasks',tasks)
-    
+
     return(
         <div className='tasks' data-testid='tasks'>
             <h2 data-testid='project-name'>{projectName}</h2>
@@ -42,7 +43,7 @@ const Tasks = () => {
                     ))
                 }
             </ul>
-
+                <AddTask/>
         </div>
     )
 }
