@@ -4,6 +4,7 @@ import moment from 'moment';
 import { firebase } from '../firebase'
 import { useSelectedProjectValue } from '../context';
 import ProjectOverlay from './ProjectOverlay';
+import TaskDate from './TaskDate';
 
 const AddTask = ({ showAddTaskMain = true, shouldShowMain = false, showQuickAddTask, setShowQuickAddTask }) => {
     const [task, setTask] = useState('')
@@ -72,7 +73,7 @@ const AddTask = ({ showAddTaskMain = true, shouldShowMain = false, showQuickAddT
                         </>
                     )}
                     <ProjectOverlay setProject={setProject} showProjectOverlay={showProjectOverlay} setShowProjectOverlay={setShowProjectOverlay} />
-                    <p>Task date here</p>
+                    <TaskDate setTaskDate={setTaskDate} showTaskDate={showTaskDate} setShowTaskDate={setShowTaskDate} />
                     <input className='add-task__content' data-testid='add-task-content' type='text' value={task} onChange={e => setTask(e.target.value)} />
                     <button type='button' className='add-task__submit' data-testid='add-task' onClick={() => addTask()}>Add Task</button>
                     {!showQuickAddTask && (
