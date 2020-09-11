@@ -8,7 +8,7 @@ const AddProject = ({shouldShow = false}) => {
     const [projectName, setProjectName] = useState('')
 
     const projectId = generatePushId();
-    const {setProjects} = useProjectsValue()
+    const {projects, setProjects} = useProjectsValue()
 
     const addProject = () => {
         projectName &&
@@ -21,7 +21,7 @@ const AddProject = ({shouldShow = false}) => {
                 userId: 'c422780d6077477594639749729eef36'
             })
             .then(()=>{
-                setProjects([]);
+                setProjects([...projects]);
                 setProjectName('')
                 setShow(false)
             })
