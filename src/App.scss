@@ -399,21 +399,21 @@ header {
       line-height: 1.50;
       font-size: 15px;
 
-      // div:nth-child(1) {
-      //   display: -webkit-box;
-      //   display: -ms-flexbox;
-      //   display: flex;
-      //   padding: 10px 0 10px 10px;
-      //   width: 100%;
+      div:nth-child(1) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px 0 10px 10px;
+        width: 100%;
 
         span:first-of-type {
           margin-right: 10px;
-          // display: -webkit-box;
-          // display: -ms-flexbox;
-          // display: flex;
-          // -webkit-box-align: center;
-          // -ms-flex-align: center;
-          // align-items: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
 
           svg {
             width: 18px;
@@ -429,6 +429,7 @@ header {
         background-color: white;
       }
     }
+  }
   }
 }
 
@@ -693,7 +694,7 @@ header {
 
   &__list li {
     @include task-item();
-    // padding: 0;
+    padding: 0;
 
     div:nth-child(1) {
       width: 100%;
