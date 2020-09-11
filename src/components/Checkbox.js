@@ -14,7 +14,9 @@ const Checkbox = ({id}) => {
     return(
         <div className='checkbox-holder'
         data-testid='checkbox-action'
-        onClick={()=>archiveTask()}>
+        onClick={()=>archiveTask()}
+        onKeyDown={()=>archiveTask()}
+        rol='button' tabIndex={0}>
             <span className='checkbox'/>
         </div>
     )

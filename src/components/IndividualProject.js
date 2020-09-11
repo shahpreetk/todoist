@@ -24,14 +24,14 @@ const IndividualProject = ({ project }) => {
         <>
             <span className='sidebar__dot'>•</span>
             <span className='sidebar__project-name'>{project.name}</span>
-            <span className='sidebar__project-delete' data-testid='delete-project' onClick={() => setShowConfirm(!showConfirm)}><FaTrashAlt />
+            <span className='sidebar__project-delete' data-testid='delete-project' onClick={() => setShowConfirm(!showConfirm)} onKeyDown={() => setShowConfirm(!showConfirm)} role='button' tabIndex={0}><FaTrashAlt />
                 {showConfirm && (
                     <div className='project-delete-modal'>
                         <div className='project-delete-modal__inner'>
                             <p>Are you sure you want to delete this project?</p>
                             <button type='button' onClick={() => deleteProject(project.docId)}>Delete
                             </button>
-                            <span onClick={() => setShowConfirm(!showConfirm)}>Cancel</span>
+                            <span onClick={() => setShowConfirm(!showConfirm)} onKeyDown={() => setShowConfirm(!showConfirm)} role='button' tabIndex={0}>Cancel</span>
                         </div>
                     </div>
                 )}
