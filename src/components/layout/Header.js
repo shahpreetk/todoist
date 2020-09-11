@@ -14,8 +14,8 @@ const Header = ({darkMode, setDarkMode}) => {
                     </div>
                     <div className="settings">
                         <ul>
-                            <li data-testid='quick-add-task-action' className='settings__add' onClick={()=>{setShowQuickAddTask(true); setShouldShowMain(true)}}>+</li>
-                            <li data-testid='dark-mode-action' className='settings__darkmode' onClick={()=>setDarkMode(!darkMode)}><FaPizzaSlice/></li>
+                            <li data-testid='quick-add-task-action' className='settings__add'><button type='button' onClick={()=>{setShowQuickAddTask(true); setShouldShowMain(true)}} onKeyDown={()=>{setShowQuickAddTask(true); setShouldShowMain(true)}}>+</button></li>
+                            <li data-testid='dark-mode-action' className='settings__darkmode'><button  onClick={()=>setDarkMode(!darkMode)} onKeyDown={()=>setDarkMode(!darkMode)}type='button'><FaPizzaSlice/></button></li>
                         </ul>
                     </div>
                 </nav>
