@@ -17,7 +17,7 @@ const ProjectOverlay = ({setProject, showProjectOverlay, setShowProjectOverlay})
                             }} onKeyDown={()=>{
                                 setProject(project.projectId)
                                 setShowProjectOverlay(false)
-                            }} role='button' tabIndex={0}>
+                            }} role='button' tabIndex={0} aria-label='Select the task project' >
                                 {project.name}
                                 </div>
                             </li>

@@ -18,7 +18,7 @@ const Projects = ({ activeValue = null }) => {
                         ? 'active sidebar__project'
                         : 'sidebar__project'
                 }>
-                <div role='button' tabIndex={0} onKeyDown={() => {
+                <div role='button' aria-label={`Select ${project.name} as the task project`} tabIndex={0} onKeyDown={() => {
                     setActive(project.projectId)
                     setSelectedProject(project.projectId)
                 }}

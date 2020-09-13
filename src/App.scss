@@ -361,7 +361,6 @@ header {
     display: -ms-flexbox;
     display: flex;
     border-bottom: $generic-border;
-    padding-left: 10px;
     cursor: pointer;
 
     span {
@@ -385,7 +384,6 @@ header {
 
   &__generic {
     li {
-      padding: 10px 0 10px 10px;
       list-style-type: none;
       color: #333;
       display: -webkit-box;
