@@ -80,11 +80,11 @@ const AddTask = ({ showAddTaskMain = true, shouldShowMain = false, showQuickAddT
                     <ProjectOverlay setProject={setProject} showProjectOverlay={showProjectOverlay} setShowProjectOverlay={setShowProjectOverlay} />
                     <TaskDate setTaskDate={setTaskDate} showTaskDate={showTaskDate} setShowTaskDate={setShowTaskDate} />
                     <input className='add-task__content' data-testid='add-task-content' type='text' value={task} onChange={e => setTask(e.target.value)} />
-                    <button type='button' className='add-task__submit' data-testid='add-task'
+                    <button className='add-task__submit' data-testid='add-task'
                     onClick={() => showQuickAddTask ? addTask() && setShowQuickAddTask(false)
                     : addTask()}
                     onKeyDown={() => showQuickAddTask ? addTask() && setShowQuickAddTask(false)
-                        : addTask()} role='button' tabIndex={0}>Add Task</button>
+                        : addTask()} tabIndex={0}>Add Task</button>
                     {!showQuickAddTask && (
                         <span className='add-task__cancel' data-testid='add-task-main-cancel' onClick={() => { setShowMain(false); setShowProjectOverlay(false) }}
                         onKeyPress={() => { setShowMain(false); setShowProjectOverlay(false) }} role='button' tabIndex={0}>Cancel</span>
