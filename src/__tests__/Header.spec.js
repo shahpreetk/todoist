@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
+import {firebase} from '../firebase'
 import Header from '../components/layout/Header';
 
 jest.mock('../context', () => ({

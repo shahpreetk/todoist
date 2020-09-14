@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import ProjectOverlay from '../components/ProjectOverlay';
+import {firebase} from '../firebase'
 import { useProjectsValue } from '../context';
 
 beforeEach(cleanup);

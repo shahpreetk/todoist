@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
+import {firebase} from '../firebase'
 import AddProjects from '../components/AddProjects';
 
 jest.mock('../context', () => ({

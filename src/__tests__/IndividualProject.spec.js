@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
+import {firebase} from '../firebase'
 import IndividualProject from '../components/IndividualProject';
 
 beforeEach(cleanup);
